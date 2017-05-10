@@ -1,0 +1,173 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+int main(int argc, char *argv[]) {
+	int n;
+	int i,j,aux,elementos,t,min,temp,max,MAX,tam;
+	int g[i];
+	
+	int a[11] = { 10, 14, 19, 21, 52, 31, 33, 9, 42, 15, 1 };
+	int b[10];
+	int c[100];
+	int h[i];
+	int sup,mitad,inf,numero,valor;
+	int d[i];
+	int list[10] = { 10, 14, 19, 26, 27, 31, 33, 35, 42, 44 };
+	 char sig='F';
+	    int e[5]={5,7,8,9,6};
+		char band ='F';
+	printf("1. Metodo Burbuja ");printf("\n");
+	printf("2. Metodo Insercion.");printf("\n");
+	printf("3. Metodo Seleccion.");printf("\n");
+	printf("4. Busqueda Binaria.");printf("\n");
+	printf("5. Busqueda Secuencial.");printf("\n");
+	
+	
+	printf("Escoja uno: ");scanf("%i",&n);
+	if(n==1){
+	
+				printf("Digite los elementos de la matriz: ");scanf("%i",&elementos);
+					for(i=0;i<elementos;i++){
+						printf("Digite un numero en la posicion [%i]= ",i);scanf("%i",&a[i]);
+					}
+					for(i=0;i<elementos;i++){
+						for(j=0;j<5;j++){
+							if(a[j]>a[j+1]){
+							
+								aux=a[j];
+								a[j]=a[j+1];
+								a[j+1]=aux;
+							}
+						}
+					}
+					
+					for(i=0;i<elementos;i++){
+						printf("%i ",a
+						[i]);
+					}
+	}
+		if(n==2){
+		
+				printf("Tamaño del array: ");
+				scanf("%i",&t);
+				int a[t];
+				for(i=0;i<t;i++){
+					printf("Digite numero en la posicion %i:  ",i);scanf("%i",&a[i]);
+				}
+				
+				
+				for(i = 0; i < t; i++){
+			            j = i;
+			            aux = a[i];
+			            while ((j > 0) && (aux < a[j - 1])) {
+			                a[j] = a[j - 1];
+			                j--;
+			            }
+			            a[j] = aux;
+			    }
+				
+				for(i=0;i<t;i++){
+					printf("%i ",a[i]);
+				}
+		}
+		if(n==3){
+		
+			
+				printf("Digite tamaño del arreglo: ");scanf("%i",&t);
+				int h[t];
+				for(i=0;i<t;i++){
+					printf("Numero en la posicion %i: ",i);scanf("%i",&h[i]);
+				}
+				for(i=0;i<t;i++){
+					min = i;
+					for(j=i+1;j<=t;j++){
+						if(h[j] < h[min]){
+							min = j;
+						}
+					}
+					temp = h[i];
+					h[i] = h[min];
+					h[min] = temp;
+				}
+				
+				for(i=0;i<t;i++){
+					printf("%i ",h[i]);
+				}
+	}
+	
+	
+		if(n==4){
+		
+					printf("¿Cuantos elementos desea en el arreglo?   ");
+					scanf("%i",&n);
+				for(i=0;i<n;i++){
+					printf("Numero en la posicion  [%i] = ",i);
+					scanf("%i",&d[i]);
+				}
+				
+				printf("Numero que desea buscar = ");
+				scanf("%i",&numero);
+			
+	
+			
+			inf=0;
+			sup=n;
+			while (inf<=sup)
+			{
+				mitad=(inf+sup)/2;
+				if (d[mitad]==numero)
+				{
+				printf("Dato encontrado ",numero,mitad);
+				break;
+				}
+				if (d[mitad]>numero)
+				{
+				printf("Dato no encontrado");
+				break;
+				}
+				{
+				sup=mitad;
+				mitad=(inf+sup)/2;
+				}
+				if (d[mitad]<numero)
+				{
+				printf("Dato no encontrado ");
+				break;
+				}
+				{
+				inf=mitad;
+				mitad=(inf+sup)/2;
+				}
+
+}
+		}
+		if(n==5){
+			
+			printf("¿Cuantos elementos desea en el arreglo?   ");
+					scanf("%i",&tam);
+				for(i=0;i<tam;i++){
+					printf("Tamaño de la matriz [%i] = ",i);
+					scanf("%i",&g[i]);
+		}
+			  printf("Numero a buscar:");scanf("%i",&numero);
+			
+			  i=0;
+			  while((sig=='F')&&(i<5)){
+				  if (e[i]==numero){
+					  sig='V';
+				  }
+				  i++;
+			  }
+			    if(sig=='F'){
+				    printf("El numero no existe dentro del arreglo.");
+			    }
+			   if(sig=='V'){
+				    printf("El numero existe");
+			   }
+		}	
+	
+	return 0;
+	
+}
