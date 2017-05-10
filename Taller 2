@@ -50,7 +50,7 @@ int *prod = (int *)malloc(sizeof(int)*n);
 			}
 		
 			if(contador[i]==1){
-				printf("El numero que no repite dos veces es: %i",numero[i]);
+				printf("El numero que no se repite  es: %i",numero[i]);
 				
 			}
 		}
