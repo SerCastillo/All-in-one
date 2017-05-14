@@ -1,0 +1,156 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+
+
+int main(int argc, char *argv[]) {
+	int n;int i=0,j=0,k=0,x,t;
+        int a[x][x];
+	printf("     TALLER 3");printf("\n\n");
+	printf("1. Rombo");printf("\n");
+	printf("2. Espiral");printf("\n");
+	printf("3. PositivoS_Negativos_Pares_Impares");printf("\n");
+	printf("4. Invertir filas y columnas.");printf("\n");
+	printf("5. Rombo Invertido");printf("\n");
+	printf("Escoja una opcion: ");scanf("%i",&n);
+	if(n==1){
+		printf("Digite el tamaño del vector: ");scanf("%i",&x);
+        
+        if(x%2==0) {
+       
+            x++;
+        }
+ 
+      
+        for(i=1;i<=x;i=i+2) {
+       
+            
+            for(k=x+1;k>=i;k=k-2){
+            
+                printf(" ");
+            }
+      
+            for(j=0;j<i;j++){
+            
+                printf("*");
+            }
+            printf("\n");
+        }
+    
+        for(i=x;i>=1;i=i-2)
+        {
+            
+            for(k=i;k<=x+2;k=k+2)
+            {
+                printf(" ");
+            }
+          
+            for(j=i-2;j>0;j--)
+            {
+                printf("*");
+            }
+            printf("\n");
+        }
+	}
+	if(n==2){
+		
+	
+		
+	}
+	if(n==3){
+		 printf("Digite el tamaño del vector: ");scanf("%i",&t);
+
+       
+      
+        
+        for (i = 0; i < t; i++) {
+            for (j = 0; j < t; j++) {
+                printf("Digite numero en la posicion [%i][%i]",i,j);
+                scanf("%i",&a[i][j]);
+                
+            }
+        }
+        for (i = 0; i < t; i++) {
+            for (j = 0; j <t; j++) {
+                printf("%i",a[i][j]);
+            }
+            
+        }
+        printf("\n");
+       printf("Los pares son: ");
+        for (i = 0; i < t; i++) {
+            for (j = 0; j < t; j++) {
+                if (a[i][j] % 2 == 0) {
+                    printf("%i\n",a[i][j]);
+
+                }
+            }    
+        }
+        printf("Los impares son: ");
+         for (i = 0; i <t; i++) {
+            for (j = 0; j <t; j++) {
+        
+        
+            
+                if (a[i][j]%2!=0){
+                    printf( "%i\n", a[i][j]);
+                }
+                    
+            }
+               
+        }
+         printf("Los numeros positivos son: ");
+          for (i = 0; i < t; i++) {
+            for (j = 0; j < t; j++) {
+        
+        
+            
+                if (a[i][j]>0){
+                    printf( "%i\n", a[i][j]);
+                }
+                    
+            }
+               
+        }
+          printf("Los numeros negativos son: ");
+          for (i = 0; i < t; i++) {
+            for (j = 0; j < t; j++) {
+        
+        
+            
+                if (a[i][j]<0){
+                    
+                    printf("%i\n", a[i][j]);
+                }
+                    
+            }
+               
+        }
+  
+	}
+	if(n==4){
+		  printf("Tamaño de la matriz: ");scanf("%i",&x);
+        
+        
+        for (i = 0; i < x; i++) {
+            for (j = 0; j < x; j++) {
+                printf("Digite numero en la posicion [%i][%i]:",i,j);scanf("%i",&a[i][j]);
+                
+            }
+        }
+        for (i = 0; i < x; i++) {
+            for (j = 0; j < x; j++) {
+                printf("%i", + a[i][j]);
+            }
+            printf("\n");
+        }
+        printf("\n");
+        for (i = 0; i < x; i++) {
+            for (j = 0; j < x; j++) {
+                printf("%i" , a[j][i]);
+            }
+            printf("\n");
+        }
+	}
+	return 0;
+}
